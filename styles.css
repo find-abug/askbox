@@ -1,0 +1,52 @@
+@layer utilities {
+  .bg-gradient-blue {
+    background: linear-gradient(to bottom, #87CEEB 0%, #0000CD 100%);
+  }
+  .btn-hover {
+    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  .slide-up {
+    animation: slideUp 1.5s ease forwards;
+  }
+  .fade-in {
+    animation: fadeIn 1s ease forwards;
+  }
+  .message-card {
+    @apply bg-white rounded-lg shadow-md p-4 mb-4 transition-all duration-300 hover:shadow-lg;
+  }
+  .comment-box {
+    @apply bg-gray-50 rounded-lg p-3 mt-2 border border-gray-200;
+  }
+  .nav-btn {
+    @apply bg-white/20 hover:bg-white/30 text-white p-2 rounded-full backdrop-blur-sm transition-all duration-300;
+  }
+  .error-message {
+    @apply text-red-500 text-sm mt-1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
